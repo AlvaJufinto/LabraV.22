@@ -1,4 +1,7 @@
 import Header from "@/components/templates/Header"
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
 
 export default function Home() {
   return (
