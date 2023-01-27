@@ -1,6 +1,6 @@
 import Head from "next/head"
 
-export default function Header() {
+const Header = () => {
     return (
         <Head>
             <title>Labra</title>
@@ -13,3 +13,5 @@ export default function Header() {
         </Head>
     )
 }
+
+export default Header;
