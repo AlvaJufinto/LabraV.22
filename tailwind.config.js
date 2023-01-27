@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     colors: {
       'purple': '#8C30F5',
-      'color': '#FFFFFF',
+      'white': '#FFFFFF',
       'black': '#000000',
       'grey': '#ECECF4',
     },
