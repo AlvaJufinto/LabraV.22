@@ -1,6 +1,9 @@
-interface IState {
-    text: string,
+import { ReactNode } from "react";
+
+interface Props {
     textType: TextType,
+    children: ReactNode,
+    newClassname: string,
 }
 
 export enum TextType {
@@ -9,30 +12,22 @@ export enum TextType {
     Regular = "regular"
 }
 
-export default function Text({ text, textType }: IState) {
-    // 64 Extra Bold
-    // 40 Extra Bold
-    // 24 Regular
-    
+const Text = ({ textType, children, newClassname }: Props) => {
     switch(textType) {
         case 'title':
             return (
-                <h1>
-                    
-                </h1>
+                <h1 className={`text-[64px] ${newClassname}`}>{ children }</h1>
             )
         case 'subTitle':
             return (
-                <p>
-                    
-                </p>
+                <p className={`text-[40px] ${newClassname}`}>{children}</p>
             )
         case 'regular':
             return (
-                <p>
-                    
-                </p>
+                <p className={`text-[24px] ${newClassname}`}>{children}</p>
             )
-    }
-   
+    }   
 }
+
+export default Text;
+
