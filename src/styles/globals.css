@@ -1,4 +1,4 @@
-/* @tailwind base; */
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -20,4 +20,8 @@ body {
 
 .btn:hover {
     opacity: 0.9;
+}
+
+span.purple {
+    color: #8C30F5;
 }
