@@ -33,7 +33,7 @@ export default function Slider() {
   return (
       <Swiper className="relative">
         {sliderContent.map((slider, i) => (
-          <SwiperSlide>
+          <SwiperSlide key={`${slider}-${i}`}>
             <GlobalContainer addClassName="absolute top-[50%] -translate-y-[50%]">
               <Text textType={TextType.Title} addClassName="text-white max-w-[685px] font-extrabold">{slider.title}</Text>
               <Text textType={TextType.Regular} addClassName="text-white max-w-[540px]">{slider.subTitle}</Text>
