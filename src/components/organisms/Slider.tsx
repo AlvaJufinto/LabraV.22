@@ -2,6 +2,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import Image from "next/image";
 
+import Text, { TextType } from "@/components/atoms/Text";
+import GlobalContainer from "@/components/templates/GlobalContainer";
+
 import SectionImg1 from "@/assets/img/section-1.png";
 import SectionImg2 from "@/assets/img/section-2.png";
 import SectionImg3 from "@/assets/img/section-3.png";
@@ -28,9 +31,13 @@ export default function Slider() {
   ]
 
   return (
-      <Swiper className="">
+      <Swiper className="relative">
         {sliderContent.map((slider, i) => (
           <SwiperSlide>
+            <GlobalContainer addClassName="absolute top-[50%] -translate-y-[50%]">
+              <Text textType={TextType.Title} addClassName="text-white max-w-[685px] font-extrabold">{slider.title}</Text>
+              <Text textType={TextType.Regular} addClassName="text-white max-w-[540px]">{slider.subTitle}</Text>
+            </GlobalContainer>
             <Image
               src={slider.img}
               alt="Picture of the author"
@@ -39,7 +46,7 @@ export default function Slider() {
           </SwiperSlide>
         ))}
         <div className="flex gap-[20px] absolute z-10 bottom-[4%] left-[50vw] -translate-x-[50%]">
-          <div className="rounded-full h-[20px] w-[20px]  bg-white opacity-50"></div>
+          <div className="rounded-full h-[20px] w-[20px] bg-white opacity-50"></div>
           <div className="rounded-full h-[20px] w-[20px] bg-white opacity-50"></div>
           <div className="rounded-full h-[20px] w-[20px] bg-white opacity-50"></div>
         </div>

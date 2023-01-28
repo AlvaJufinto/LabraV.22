@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 interface Props {
     textType: TextType,
     children: ReactNode,
-    newClassName?: string,
+    addClassName?: string,
 }
 
 export enum TextType {
@@ -12,19 +12,19 @@ export enum TextType {
     Regular = "regular"
 }
 
-const Text = ({ textType, children, newClassName }: Props) => {
+const Text = ({ textType, children, addClassName }: Props) => {
     switch(textType) {
         case TextType.Title:
             return (
-                <h1 className={`text-[64px] ${newClassName}`}>{ children }</h1>
+                <h1 className={`text-[4rem] ${addClassName}`}>{ children }</h1>
             )
         case TextType.SubTitle:
             return (
-                <p className={`text-[40px] ${newClassName}`}>{children}</p>
+                <p className={`text-[2.5rem] ${addClassName}`}>{children}</p>
             )
         case TextType.Regular:
             return (
-                <p className={`text-[24px] ${newClassName}`}>{children}</p>
+                <p className={`text-[1.5rem] ${addClassName}`}>{children}</p>
             )
     }   
 }

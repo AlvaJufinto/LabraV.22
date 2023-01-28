@@ -6,7 +6,7 @@ interface Props {
 
 const Button = ({ children }: Props) => {
     return (
-        <button className="btn bg-purple text-white py-[10px] px-[20px] rounded text-[14px] font-medium rounded-[5px]">
+        <button className="btn bg-purple text-white py-[10px] px-[20px] text-[14px] font-medium rounded-[5px]">
             {children}
         </button>
     )

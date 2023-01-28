@@ -3,9 +3,6 @@ module.exports = {
   content: [
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
-  screens: {
-    'sm': { 'max': '768px' },
-  },
   theme: {
     colors: {
       'purple': '#8C30F5',
@@ -14,6 +11,10 @@ module.exports = {
       'grey': '#ECECF4',
     },
     extend: {},
+    screens: {
+      'sm': { 'max': '768px' },
+      'xl': { 'max': '1280px' },
+    },
   },
   plugins: [],
 }

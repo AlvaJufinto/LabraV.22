@@ -2,12 +2,15 @@ import { ReactNode } from "react";
 
 interface Props {
     children: ReactNode,
+    addClassName: string,
 }
 
-const GlobalContainer = ({ children }: Props) => {
+const GlobalContainer = ({ children, addClassName }: Props) => {
     return (
-        <div className="max-w-[120px]">
-            {children}
+        <div className={`w-[100vw] flex justify-center`}>
+            <div className={`w-[1100px] ${addClassName} xl:w-[100vw] xl:px-[5%]`}>
+                {children}
+            </div>
         </div>
     )
 }
