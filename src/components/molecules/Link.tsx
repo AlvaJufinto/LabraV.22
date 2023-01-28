@@ -9,7 +9,7 @@ interface Props {
 
 const LinkComponent = ({ children, href, addClassName }: Props) => {
     return (
-        <Link href={href} className={`text-white no-underline text-[14px] font-medium ${addClassName}`}>
+        <Link href={href} className={`select-none text-white no-underline text-[14px] font-medium ${addClassName}`}>
             {children}
         </Link>
     )
