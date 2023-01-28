@@ -5,7 +5,9 @@ import Button from "@/components/molecules/Button"
 
 import SectionImg from "@/assets/img/section-1.png"
 import LinkComponent from "@/components/molecules/Link";
+
 import Slider from "@/components/organisms/Slider";
+import Navbar from "@/components/organisms/Navbar";
 
 import "swiper/css";
 
@@ -13,6 +15,7 @@ export default function Home() {
   return (
     <>
       <Header />
+      <Navbar />
       <Slider />
     </>
   )
