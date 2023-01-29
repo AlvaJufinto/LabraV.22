@@ -5,33 +5,13 @@ import Image from "next/image";
 import Text, { TextType } from "@/components/atoms/Text";
 import GlobalContainer from "@/components/templates/GlobalContainer";
 
-import SectionImg1 from "@/assets/img/section-1.png";
-import SectionImg2 from "@/assets/img/section-2.png";
-import SectionImg3 from "@/assets/img/section-3.png";
+import { sliderContent } from "@/data";
 
 import "swiper/css";
 
 export default function Slider() {
-  const sliderContent = [
-    {
-      img: SectionImg1,
-      title: "New Generation of Two-way Radio",
-      subTitle: "Interface Gateway Technology RoIP (Radio Through IP) Solution",
-    },
-    {
-      img: SectionImg2,
-      title: "Fast Transmission Signal",
-      subTitle: "Never lost an important signal"
-    },
-    {
-      img: SectionImg3,
-      title: "Flexibility With LABRA V.22",
-      subTitle: "Combine LABRA V.22 With your require radio or even your favorite!"
-    }
-  ]
-
   return (
-      <Swiper className="relative">
+      <Swiper className="relative" id="Overview">
         {sliderContent.map((slider, i) => (
           <SwiperSlide key={`${slider}-${i}`}>
             <GlobalContainer addClassName="absolute top-[50%] -translate-y-[50%]">
