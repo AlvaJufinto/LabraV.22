@@ -1,18 +1,22 @@
+import Image from "next/image";
+
 import GlobalContainer from "@/components/templates/GlobalContainer";
 import ContentContainer from "@/components/templates/ContentContainer";
 
 import Slider from "@/components/organisms/Slider";
 import Navbar from "@/components/organisms/Navbar";
+import Text, { TextType } from "@/components/atoms/Text";
+
+import LabraBg from "@/assets/img/labra-product.png";
 
 import "swiper/css";
-import Text, { TextType } from "@/components/atoms/Text";
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <Slider />
-      <div className="bg-grey h-[1200px]">
+      <div className="bg-grey">
         <GlobalContainer>
         <ContentContainer title="About">
           <Text textType={TextType.Regular}>
@@ -20,6 +24,11 @@ export default function Home() {
           </Text>
         </ContentContainer>
         </GlobalContainer>
+        <Image
+          src={LabraBg}
+          alt="Picture of Labra (IP Radio)"
+          className="w-[100vw]"
+        />
       </div>
     </>
   )
