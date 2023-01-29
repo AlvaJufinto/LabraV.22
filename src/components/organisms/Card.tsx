@@ -19,7 +19,7 @@ const Card = ({ cardType, addClassName, title, image}: Props) => {
     switch(cardType) {
         case CardType.Spesification:
             return (
-                <div className="w-[350px] min-h-[165px] bg-white rounded-[8px] flex px-[32px] py-[40px] items-center">
+                <div className="w-[350px] min-h-[165px] bg-white rounded-[8px] flex px-[32px] py-[40px] items-center sm:w-[100%]">
                     <div className="flex flex-col h-[100%] gap-[20px] justify-center">
                         <Image 
                             src={image} 

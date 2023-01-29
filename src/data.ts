@@ -5,7 +5,13 @@ import SectionImg2 from "@/assets/img/section-2.png";
 import SectionImg3 from "@/assets/img/section-3.png";
 
 import ElectricIcon from "@/assets/icon/electric-icon.svg";
-
+import VolumeIcon from "@/assets/icon/volume-icon.svg";
+import ProcessorIcon from "@/assets/icon/processor-icon.svg";
+import PlaneIcon from "@/assets/icon/plane-icon.svg";
+import TimeIcon from "@/assets/icon/time-icon.svg";
+import MenuIcon from "@/assets/icon/menu-icon.svg";
+import GpsIcon from "@/assets/icon/gps-icon.svg";
+import RestartIcon from "@/assets/icon/restart-icon.svg";
 
 export interface ISlider {
     img: StaticImageData,
@@ -45,31 +51,31 @@ export const spesificationContent: ISpesification[] = [
         title: "Input 12V DC 4A"
     },
     {
-        image: ElectricIcon,
+        image: VolumeIcon,
         title: "Volume Control"
     },
     {
-        image: ElectricIcon,
+        image: ProcessorIcon,
         title: "AVR Microcontroler"
     },
     {
-        image: ElectricIcon,
+        image: PlaneIcon,
         title: "Controlling with Telegram"
     },
     {
-        image: ElectricIcon,
+        image: TimeIcon,
         title: "Delay Repeater (Manual or Telegram)"
     },
     {
-        image: ElectricIcon,
+        image: MenuIcon,
         title: "Controlling Menu (Manual or Telegram)"
     },
     {
-        image: ElectricIcon,
+        image: GpsIcon,
         title: "GPS Anntenas (with Android System)"
     },
     {
-        image: ElectricIcon,
+        image: RestartIcon,
         title: "AutoRestart for PoC Radio (Manual or Telegram)"
     },
 ]
