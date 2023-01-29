@@ -20,7 +20,7 @@ const Text = ({ textType, children, addClassName }: Props) => {
             )
         case TextType.SubTitle:
             return (
-                <p className={`text-[2.5rem] ${addClassName}`}>{children}</p>
+                <h3 className={`text-[2.5rem] ${addClassName}`}>{children}</h3>
             )
         case TextType.Regular:
             return (

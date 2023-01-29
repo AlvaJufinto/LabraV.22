@@ -8,9 +8,9 @@ interface Props {
 
 const ContentContainer = ({  }: Props) => {
     return (
-        <div>
+        <section>
 
-        </div>
+        </section>
     )
 }
 

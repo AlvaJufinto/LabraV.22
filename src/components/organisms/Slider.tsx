@@ -16,7 +16,7 @@ export default function Slider() {
     {
       img: SectionImg1,
       title: "New Generation of Two-way Radio",
-      subTitle: "Interface Gateway Technology RoIP (Radio Through IP) Solution"
+      subTitle: "Interface Gateway Technology RoIP (Radio Through IP) Solution",
     },
     {
       img: SectionImg2,
@@ -40,7 +40,7 @@ export default function Slider() {
             </GlobalContainer>
             <Image
               src={slider.img}
-              alt="Picture of the author"
+              alt="Labra V.22 Description (IP Radio)"
               className="w-[100vw] select-none"
             />
           </SwiperSlide>
