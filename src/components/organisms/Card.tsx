@@ -29,6 +29,18 @@ const Card = ({ cardType, addClassName, title, image}: Props) => {
                     </div>
                 </div>
             )
+        case CardType.Feature:
+            return (
+                <div className="w-[250px] min-h-[200px] bg-white rounded-[8px] p-[24px] sm:w-[100%]">
+                    <div className="flex flex-col h-[100%] gap-[20px] justify-between">
+                        <Text textType={TextType.Regular} addClassName="font-semibold text-left">{title}</Text>
+                        <Image 
+                            src={image} 
+                            alt="Feature of Labra V.22"
+                            className="h-[32px]" />
+                    </div>
+                </div>
+            )
         default:
             return (
                 <div>awokaowkoawk</div>

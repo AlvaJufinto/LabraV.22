@@ -9,7 +9,7 @@ import Card, { CardType } from "@/components/organisms/Card";
 
 import Text, { TextType } from "@/components/atoms/Text";
 
-import { spesificationContent } from "@/data";
+import { spesificationContent, featureContent } from "@/data";
 
 import LabraBg from "@/assets/img/labra-product.png";
 import FeatureBg from "@/assets/img/feature-bg.png";
@@ -47,15 +47,20 @@ export default function Home() {
         </GlobalContainer>
       </div>
       <div 
-        className="min-h-[1045px] w-[100vw] bg-no-repeat bg-cover bg-center"
+        className="min-h-[1200px] w-[100vw] bg-no-repeat bg-cover bg-center"
         style={{
           backgroundImage: `url(${FeatureBg.src})`,
-        }} id="Spesification">
-        {/* <GlobalContainer>
-          <ContentContainer title="Spesification of" addClassName="text-white">
-            
+        }} 
+        id="Feature">
+        <GlobalContainer>
+          <ContentContainer title="Discover Features of" addClassName="text-white">
+            <div className="flex flex-wrap justify-center gap-[30px] ">
+              {featureContent.map(content => (
+                <Card title={content.title} cardType={CardType.Feature} image={content.image} />
+              ))}
+            </div>
           </ContentContainer>
-        </GlobalContainer> */}
+        </GlobalContainer>
       </div>
     </>
   )
