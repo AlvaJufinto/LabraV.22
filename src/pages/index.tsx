@@ -3,9 +3,10 @@ import Image from "next/image";
 import GlobalContainer from "@/components/templates/GlobalContainer";
 import ContentContainer from "@/components/templates/ContentContainer";
 
-import Slider from "@/components/organisms/Slider";
 import Navbar from "@/components/organisms/Navbar";
+import Slider from "@/components/organisms/Slider";
 import Card, { CardType } from "@/components/organisms/Card";
+import Footer from "@/components/organisms/Footer";
 
 import Text, { TextType } from "@/components/atoms/Text";
 
@@ -62,7 +63,7 @@ export default function Home() {
           </ContentContainer>
         </GlobalContainer>
       </div>
-      <div className="bg-grey" id="Spesification">
+      <div className="bg-grey" id="Warranty">
         <GlobalContainer>
           <ContentContainer title="Support of" addClassName="text-black">
             <div className="w-[100%]">
@@ -73,6 +74,7 @@ export default function Home() {
           </ContentContainer>
         </GlobalContainer>
       </div>
+      <Footer />
     </>
   )
 }
