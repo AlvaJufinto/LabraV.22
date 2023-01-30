@@ -1,6 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-
-import Image from "next/image";
+import { useState } from "react";
 
 import Text, { TextType } from "@/components/atoms/Text";
 import GlobalContainer from "@/components/templates/GlobalContainer";
@@ -10,6 +9,10 @@ import { sliderContent } from "@/data";
 import "swiper/css";
 
 export default function Slider() {
+  const [swiper, setSwiper] = useState(null);
+
+  // const slideTo = (index) => swiper.slideTo(index);
+
   return (
     <Swiper 
       className="w-[100vw] h-[45vw] min-h-[500px]" 
