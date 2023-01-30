@@ -12,6 +12,7 @@ import Text, { TextType } from "@/components/atoms/Text";
 import { spesificationContent } from "@/data";
 
 import LabraBg from "@/assets/img/labra-product.png";
+import FeatureBg from "@/assets/img/feature-bg.png";
 
 import "swiper/css";
 
@@ -44,6 +45,17 @@ export default function Home() {
             </div>
           </ContentContainer>
         </GlobalContainer>
+      </div>
+      <div 
+        className="min-h-[1045px] w-[100vw] bg-no-repeat bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${FeatureBg.src})`,
+        }} id="Spesification">
+        {/* <GlobalContainer>
+          <ContentContainer title="Spesification of" addClassName="text-white">
+            
+          </ContentContainer>
+        </GlobalContainer> */}
       </div>
     </>
   )
