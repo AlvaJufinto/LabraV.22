@@ -1,5 +1,5 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { useState } from "react";
+import { useState, useEffect, useRef  } from "react";
+import { Swiper, SwiperSlide, useSwiper  } from "swiper/react";
 
 import Text, { TextType } from "@/components/atoms/Text";
 import GlobalContainer from "@/components/templates/GlobalContainer";
@@ -9,15 +9,26 @@ import { sliderContent } from "@/data";
 import "swiper/css";
 
 export default function Slider() {
-  const [swiper, setSwiper] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const swiperInstance = useSwiper();
 
-  // const slideTo = (index) => swiper.slideTo(index);
+  const onSwiperSlideChange: any = (swiper: any) => {
+    setActiveIndex(swiper.activeIndex);
+  };  
+  
+  const onButtonClick = (index: number) => {
+    setActiveIndex(index);
+    if (swiperInstance) {
+      swiperInstance.slideTo(index);
+    }
+  };
+
 
   return (
     <Swiper 
       className="w-[100vw] h-[45vw] min-h-[500px]" 
-      id="Overview"
-      onSwiper={(swiper) => console.log("swiper")}>
+      id="Overview" 
+      onSlideChange={onSwiperSlideChange}>
         {sliderContent.map((slider, i) => (
           <SwiperSlide key={`${slider}-${i}`} style={{
             backgroundImage: `url(${slider.img.src})`
@@ -31,7 +42,7 @@ export default function Slider() {
         ))}
         <div className="flex gap-[20px] absolute z-10 bottom-[4%] left-[50vw] -translate-x-[50%]">
           {Array(sliderContent.length).fill("").map((arr, i) => (
-            <div key={`arr-${i}`} className="rounded-full h-[20px] w-[20px] bg-white opacity-50"></div>
+            <div key={`arr-${i}`} onClick={() => onButtonClick(i)} className={`rounded-full h-[20px] w-[20px] bg-white cursor-pointer ${activeIndex === i ? '' : 'opacity-50'}`}></div>
           ))}
         </div>
       </Swiper>
