@@ -1,14 +1,16 @@
 import Image from "next/image";
 
+import Text, { TextType } from "@/components/atoms/Text";
+
 import GlobalContainer from "@/components/templates/GlobalContainer";
 import ContentContainer from "@/components/templates/ContentContainer";
+import Header from "@/components/templates/Header";
 
 import Navbar from "@/components/organisms/Navbar";
 import Slider from "@/components/organisms/Slider";
 import Card, { CardType } from "@/components/organisms/Card";
 import Footer from "@/components/organisms/Footer";
 
-import Text, { TextType } from "@/components/atoms/Text";
 
 import { spesificationContent, featureContent, supportContent } from "@/data";
 
