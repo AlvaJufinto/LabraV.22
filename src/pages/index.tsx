@@ -43,7 +43,7 @@ export default function Home() {
           <ContentContainer title="Spesification of" addClassName="text-white">
             <div className="flex flex-wrap justify-center gap-[30px] ">
               {spesificationContent.map(content => (
-                <Card title={content.title} cardType={CardType.Spesification} image={content.image} />
+                <Card key={content.title} title={content.title} cardType={CardType.Spesification} image={content.image} />
               ))}
             </div>
           </ContentContainer>
@@ -59,7 +59,7 @@ export default function Home() {
           <ContentContainer title="Discover Features of" addClassName="text-white">
             <div className="flex flex-wrap justify-center gap-[30px] ">
               {featureContent.map(content => (
-                <Card title={content.title} cardType={CardType.Feature} image={content.image} />
+                <Card key={content.title} title={content.title} cardType={CardType.Feature} image={content.image} />
               ))}
             </div>
           </ContentContainer>
@@ -70,7 +70,7 @@ export default function Home() {
           <ContentContainer title="Support of" addClassName="text-black">
             <div className="w-[100%]">
               {supportContent.map(content => (
-                <Card title={content.title} subTitle={content.subTitle} cardType={CardType.Support} image={content.image} imageSecond={content.imageSecond} />
+                <Card key={content.title} title={content.title} subTitle={content.subTitle} cardType={CardType.Support} image={content.image} imageSecond={content.imageSecond} />
               ))}
             </div>
           </ContentContainer>
