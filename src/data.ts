@@ -21,6 +21,12 @@ import FrequencyIcon from "@/assets/icon/frequency-icon.svg";
 import TimePlusIcon from "@/assets/icon/time-plus-icon.svg";
 import WalkieIcon from "@/assets/icon/walkie-icon.svg";
 
+import RepairIcon from "@/assets/icon/repair-icon.svg";
+import SettingIcon from "@/assets/icon/setting-icon.svg";
+
+import LabraPattern from "@/assets/img/labra-pattern.png";
+import LabraPattern2 from "@/assets/img/labra-pattern-2.png";
+
 
 export interface ISlider {
     img: StaticImageData,
@@ -138,4 +144,19 @@ export const featureContent: ISpesification[] = [
         image: WalkieIcon,
         title: "RoIP RX only (POC cannot transmit to 2 Ways Radio System)"
     },
+]
+
+export const supportContent = [
+    {
+        image: RepairIcon,
+        imageSecond: LabraPattern,
+        title: "1 Year Warranty",
+        subTitle: "Get 1 year warranty of our product" 
+    },
+    {
+        image: SettingIcon,
+        imageSecond: LabraPattern2,
+        title: "5 Years Spare Part Support",
+        subTitle: "Spare Part Available For Next 5 Years"
+    }
 ]

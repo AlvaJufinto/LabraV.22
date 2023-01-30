@@ -9,7 +9,7 @@ import Card, { CardType } from "@/components/organisms/Card";
 
 import Text, { TextType } from "@/components/atoms/Text";
 
-import { spesificationContent, featureContent } from "@/data";
+import { spesificationContent, featureContent, supportContent } from "@/data";
 
 import LabraBg from "@/assets/img/labra-product.png";
 import FeatureBg from "@/assets/img/feature-bg.png";
@@ -57,6 +57,17 @@ export default function Home() {
             <div className="flex flex-wrap justify-center gap-[30px] ">
               {featureContent.map(content => (
                 <Card title={content.title} cardType={CardType.Feature} image={content.image} />
+              ))}
+            </div>
+          </ContentContainer>
+        </GlobalContainer>
+      </div>
+      <div className="bg-grey" id="Spesification">
+        <GlobalContainer>
+          <ContentContainer title="Support of" addClassName="text-black">
+            <div className="w-[100%]">
+              {supportContent.map(content => (
+                <Card title={content.title} subTitle={content.subTitle} cardType={CardType.Support} image={content.image} imageSecond={content.imageSecond} />
               ))}
             </div>
           </ContentContainer>

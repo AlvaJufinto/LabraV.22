@@ -2,10 +2,15 @@ import Image, { StaticImageData } from "next/image"
 
 import Text, { TextType } from "@/components/atoms/Text"
 
+import RepairIcon from "@/assets/icon/repair-icon.svg";
+import SettingIcon from "@/assets/icon/setting-icon.svg";
+
 interface Props {
     cardType: CardType,
     title: string,
+    subTitle?: string,
     image: StaticImageData,
+    imageSecond?: StaticImageData,
     addClassName?: string,
 }
 
@@ -15,7 +20,7 @@ export enum CardType {
     Support = "support",
 }
 
-const Card = ({ cardType, addClassName, title, image}: Props) => {
+const Card = ({ cardType, title, subTitle, image, imageSecond}: Props) => {
     switch(cardType) {
         case CardType.Spesification:
             return (
@@ -38,6 +43,25 @@ const Card = ({ cardType, addClassName, title, image}: Props) => {
                             src={image} 
                             alt="Feature of Labra V.22"
                             className="h-[32px]" />
+                    </div>
+                </div>
+            )
+        case CardType.Support:
+            return (
+                <div className="w-[100%] min-h-[420px] bg-purple rounded-[12px] px-[64px] py-[20px] mb-[35px] flex flex-col justify-center">
+                    <div className="flex h-[100%] w-[100%] items-center justify-between">
+                        <div className="flex flex-col gap-[10px]">
+                            <Image
+                                src={image}
+                                alt="Feature of Labra V.22"
+                                className="" />
+                            <Text textType={TextType.SubTitle} addClassName="font-bold text-left text-white">{title}</Text>
+                            <Text textType={TextType.Regular} addClassName="font-regular text-left text-white max-w-[350px]">{subTitle}</Text>
+                        </div>
+                        <Image
+                            src={imageSecond ? imageSecond : "" } 
+                            alt="Feature of Labra V.22"
+                            className="" />
                     </div>
                 </div>
             )
