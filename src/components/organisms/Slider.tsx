@@ -18,9 +18,9 @@ export default function Slider() {
   
   const onButtonClick = (index: number) => {
     setActiveIndex(index);
-    if (swiperInstance) {
-      swiperInstance.slideTo(index);
-    }
+    // if (swiperInstance) {
+    //   swiperInstance.slideTo(index);
+    // }
   };
 
 
@@ -28,6 +28,8 @@ export default function Slider() {
     <Swiper 
       className="w-[100vw] h-[45vw] min-h-[500px]" 
       id="Overview" 
+      navigation={true}
+      initialSlide={activeIndex}
       onSlideChange={onSwiperSlideChange}>
         {sliderContent.map((slider, i) => (
           <SwiperSlide key={`${slider}-${i}`} style={{
