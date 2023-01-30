@@ -30,8 +30,8 @@ export default function Slider() {
           </SwiperSlide>
         ))}
         <div className="flex gap-[20px] absolute z-10 bottom-[4%] left-[50vw] -translate-x-[50%]">
-          {Array(sliderContent.length).fill("").map((arr) => (
-            <div className="rounded-full h-[20px] w-[20px] bg-white opacity-50"></div>
+          {Array(sliderContent.length).fill("").map((arr, i) => (
+            <div key={`arr-${i}`} className="rounded-full h-[20px] w-[20px] bg-white opacity-50"></div>
           ))}
         </div>
       </Swiper>
