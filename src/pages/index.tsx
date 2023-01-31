@@ -50,7 +50,7 @@ export default function Home() {
         </GlobalContainer>
       </div>
       <div 
-        className="min-h-[1200px] w-[100vw] bg-no-repeat bg-cover bg-center"
+        className="min-h-[1200px] w-[100vw] pb-[50px] bg-no-repeat bg-cover bg-center"
         style={{
           backgroundImage: `url(${FeatureBg.src})`,
         }} 
