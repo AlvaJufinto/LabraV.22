@@ -24,7 +24,7 @@ const Card = ({ cardType, title, subTitle, image, imageSecond}: Props) => {
     switch(cardType) {
         case CardType.Spesification:
             return (
-                <div className="w-[350px] min-h-[200px] sm:min-h-[180px] bg-white rounded-[8px] flex px-[32px] py-[40px] items-center sm:w-[100%]">
+                <div className="hover:-translate-y-[10px] transition-all w-[350px] min-h-[200px] sm:min-h-[180px] bg-white rounded-[8px] flex px-[32px] py-[40px] items-center sm:w-[100%]">
                     <div className="flex flex-col h-[100%] justify-between">
                         <Image 
                             src={image} 
@@ -36,7 +36,7 @@ const Card = ({ cardType, title, subTitle, image, imageSecond}: Props) => {
             )
         case CardType.Feature:
             return (
-                <div className="w-[250px] min-h-[200px] sm:min-h-[150px] bg-white rounded-[8px] p-[24px] sm:w-[100%]">
+                <div className="hover:-translate-y-[10px] transition-all w-[250px] min-h-[200px] sm:min-h-[150px] bg-white rounded-[8px] p-[24px] sm:w-[100%]">
                     <div className="flex flex-col h-[100%] justify-between">
                         <Text textType={TextType.Regular} addClassName="font-semibold text-left">{title}</Text>
                         <Image 
