@@ -4,7 +4,6 @@ import Text, { TextType } from "@/components/atoms/Text";
 
 import GlobalContainer from "@/components/templates/GlobalContainer";
 import ContentContainer from "@/components/templates/ContentContainer";
-import Header from "@/components/templates/Header";
 
 import Navbar from "@/components/organisms/Navbar";
 import Slider from "@/components/organisms/Slider";
@@ -27,9 +26,17 @@ export default function Home() {
       <div className="bg-grey" id="Product">
         <GlobalContainer>
           <ContentContainer title="About">
-            <Text textType={TextType.Regular}>
-              LABRA V.22 Interface Gateway technology RolP (Radio Through IP) is a terminal between 2-ways radio using cellular technology with IP configuration. This technology is to ensure that the audio is transmitted simultaneously and the PPT control signal is transmitted immediately and reliably.Radio range is generally limited by limited transmission power, antenna sensitivity, and other environmental factors.
-            </Text>
+            <div className="flex flex-col gap-[30px]">
+              <Text textType={TextType.Regular}>
+                LABRA V.22 Interface Gateway technology RolP (Radio Through IP) is a terminal between 2-ways radio using cellular technology with IP configuration.
+              </Text>
+              <Text textType={TextType.Regular}>
+                 This technology is to ensure that the audio is transmitted simultaneously and the PPT control signal is transmitted immediately and reliably
+              </Text>
+              <Text textType={TextType.Regular}>
+                 Radio range is generally limited by limited transmission power, antenna sensitivity, and other environmental factors.
+              </Text>
+            </div>
           </ContentContainer>
         </GlobalContainer>
         <Image

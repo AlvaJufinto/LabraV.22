@@ -54,7 +54,7 @@ const Card = ({ cardType, title, subTitle, image, imageSecond}: Props) => {
                             <Image
                                 src={image}
                                 alt="Feature of Labra V.22"
-                                className="" />
+                                className="my-[20px]" />
                             <Text textType={TextType.SubTitle} addClassName="font-bold text-left text-white sm:text-center">{title}</Text>
                             <Text textType={TextType.Regular} addClassName="font-regular text-left text-white max-w-[350px] sm:text-center">{subTitle}</Text>
                         </div>

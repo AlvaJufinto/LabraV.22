@@ -13,7 +13,7 @@ const Footer = () => {
         <footer className={`bg-grey min-h-[500px] py-[150px]`} id="ContactUs">
             <GlobalContainer>
                 <div
-                    className="h-[300px] w-[100%] rounded-[15px] bg-purple flex items-center px-[110px]"
+                    className="h-[280px] w-[100%] rounded-[15px] flex items-center px-[100px] sm:px-[50px] bg-no-repeat bg-center"
                     style={{
                         backgroundImage: `url(${FooterBg.src})` 
                     }}>

@@ -30,3 +30,16 @@ html {
 span.purple {
     color: #8C30F5;
 }
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.);
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+  }

@@ -33,7 +33,7 @@ export default function Slider() {
           <SwiperSlide key={`${slider}-${i}`} style={{
             backgroundImage: `linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(${slider.img.src})`
           }}
-          className={`bg-no-repeat bg-center ${i === 0 ? "sm:bg-right" : ""} ${i === 2 ? "sm:-bg-[20px]" : ""}   bg-cover flex`}>
+          className={`bg-no-repeat bg-center ${i === 0 ? "sm:bg-right" : ""} ${i === 2 ? "bg-left-bottom top sm:-bg-[20px]" : ""}   bg-cover flex`}>
             <GlobalContainer addClassName=" flex flex-col justify-center">
               <Text textType={TextType.Title} addClassName="text-white max-w-[685px] font-extrabold">{slider.title}</Text>
               <Text textType={TextType.Regular} addClassName="text-white max-w-[540px]">{slider.subTitle}</Text>
