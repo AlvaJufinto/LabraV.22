@@ -12,7 +12,7 @@ import { links } from "@/data";
 
 const MobileNavbar = ({ setIsShowNav }: any) => {
     return (
-        <div className="top-0 left-0 fixed h-[100vh] w-[100vw] bg-grey z-50 p-[20px]">
+        <div className="top-0 left-0 fixed h-[100vh] w-[100vw] bg-grey p-[20px] z-50">
             <div className="flex flex-col justify-between h-[100%]">
                 <Image src={CloseIcon} alt="CLoseIcon"  onClick={() => setIsShowNav(false)} />
                 <div className="flex flex-col gap-[20px]">
