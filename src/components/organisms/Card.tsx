@@ -24,8 +24,8 @@ const Card = ({ cardType, title, subTitle, image, imageSecond}: Props) => {
     switch(cardType) {
         case CardType.Spesification:
             return (
-                <div className="w-[350px] min-h-[165px] bg-white rounded-[8px] flex px-[32px] py-[40px] items-center sm:w-[100%]">
-                    <div className="flex flex-col h-[100%] gap-[20px] justify-center">
+                <div className="w-[350px] min-h-[200px] sm:min-h-[180px] bg-white rounded-[8px] flex px-[32px] py-[40px] items-center sm:w-[100%]">
+                    <div className="flex flex-col h-[100%] justify-between">
                         <Image 
                             src={image} 
                             alt="Feature of Labra V.22"
@@ -36,8 +36,8 @@ const Card = ({ cardType, title, subTitle, image, imageSecond}: Props) => {
             )
         case CardType.Feature:
             return (
-                <div className="w-[250px] min-h-[200px] bg-white rounded-[8px] p-[24px] sm:w-[100%]">
-                    <div className="flex flex-col h-[100%] gap-[20px] justify-between">
+                <div className="w-[250px] min-h-[200px] sm:min-h-[150px] bg-white rounded-[8px] p-[24px] sm:w-[100%]">
+                    <div className="flex flex-col h-[100%] justify-between">
                         <Text textType={TextType.Regular} addClassName="font-semibold text-left">{title}</Text>
                         <Image 
                             src={image} 
