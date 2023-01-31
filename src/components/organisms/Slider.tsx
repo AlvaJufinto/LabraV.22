@@ -1,5 +1,6 @@
-import { useState, useEffect, useRef  } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide, useSwiper  } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper";
 
 import Text, { TextType } from "@/components/atoms/Text";
 import GlobalContainer from "@/components/templates/GlobalContainer";
@@ -28,12 +29,17 @@ export default function Slider() {
       id="Overview" 
       navigation={true}
       initialSlide={activeIndex}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      modules={[Autoplay]}
       onSlideChange={onSwiperSlideChange}>
         {sliderContent.map((slider, i) => (
           <SwiperSlide key={`${slider}-${i}`} style={{
             backgroundImage: `linear-gradient(90deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(${slider.img.src})`
           }}
-          className={`bg-no-repeat bg-center ${i === 0 ? "sm:bg-right" : ""} ${i === 2 ? "bg-left-bottom top sm:-bg-[20px]" : ""}   bg-cover flex`}>
+          className={`bg-no-repeat sm:bg-center ${i === 0 ? "bg-center sm:bg-right" : ""} ${i === 2 ? "bg-left-bottom" : ""}   bg-cover flex`}>
             <GlobalContainer addClassName=" flex flex-col justify-center">
               <Text textType={TextType.Title} addClassName="text-white max-w-[685px] font-extrabold">{slider.title}</Text>
               <Text textType={TextType.Regular} addClassName="text-white max-w-[540px]">{slider.subTitle}</Text>
