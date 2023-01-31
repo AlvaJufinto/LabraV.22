@@ -49,19 +49,19 @@ const Card = ({ cardType, title, subTitle, image, imageSecond}: Props) => {
         case CardType.Support:
             return (
                 <div className="w-[100%] min-h-[420px] bg-purple rounded-[12px] px-[64px] py-[20px] mb-[35px] flex flex-col justify-center">
-                    <div className="flex h-[100%] w-[100%] items-center justify-between">
-                        <div className="flex flex-col gap-[10px]">
+                    <div className="flex h-[100%] w-[100%] items-center justify-between sm:flex-col sm:gap-[30px]">
+                        <div className="flex flex-col gap-[10px] sm:items-center">
                             <Image
                                 src={image}
                                 alt="Feature of Labra V.22"
                                 className="" />
-                            <Text textType={TextType.SubTitle} addClassName="font-bold text-left text-white">{title}</Text>
-                            <Text textType={TextType.Regular} addClassName="font-regular text-left text-white max-w-[350px]">{subTitle}</Text>
+                            <Text textType={TextType.SubTitle} addClassName="font-bold text-left text-white sm:text-center">{title}</Text>
+                            <Text textType={TextType.Regular} addClassName="font-regular text-left text-white max-w-[350px] sm:text-center">{subTitle}</Text>
                         </div>
                         <Image
                             src={imageSecond ? imageSecond : "" } 
                             alt="Feature of Labra V.22"
-                            className="" />
+                            className="sm:w-[250px]" />
                     </div>
                 </div>
             )
