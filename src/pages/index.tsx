@@ -10,7 +10,6 @@ import Slider from "@/components/organisms/Slider";
 import Card, { CardType } from "@/components/organisms/Card";
 import Footer from "@/components/organisms/Footer";
 
-
 import { spesificationContent, featureContent, supportContent } from "@/data";
 
 import LabraBg from "@/assets/img/labra-product.png";
