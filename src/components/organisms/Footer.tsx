@@ -25,7 +25,7 @@ const Footer = () => {
                             </div>
                             <div className="flex gap-[20px] opacity-80 hover:opacity-100 hover:translate-x-[5px] transition-all">
                                 <Image src={EmailIcon} alt="ContactIcon" />
-                                <Text textType={TextType.Regular} addClassName="text-white font-medium ">sales@megadata.net.id</Text>
+                                <Text textType={TextType.Regular} addClassName="text-white font-medium ">sales@megadata.id</Text>
                             </div>
                         </div>
                 </div>
