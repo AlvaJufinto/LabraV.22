@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 interface Props {
     children: ReactNode,
-    addClassName: string,
+    addClassName?: string,
 }
 
 const Button = ({ children, addClassName }: Props) => {
