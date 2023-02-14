@@ -21,11 +21,11 @@ const Footer = () => {
                             <Text addClassName="text-white font-extrabold mb-[30px]" textType={TextType.SubTitle}>Contact and Support</Text>
                             <div className="flex gap-[20px] mb-[30px] opacity-80 hover:opacity-100 hover:translate-x-[5px] transition-all">
                                 <Image src={WhatsappIcon} alt="ContactIcon" />
-                                <Text textType={TextType.Regular} addClassName="text-white font-medium">08123458592</Text>
+                                <Text textType={TextType.Regular} addClassName="text-white font-medium">-</Text>
                             </div>
                             <div className="flex gap-[20px] opacity-80 hover:opacity-100 hover:translate-x-[5px] transition-all">
                                 <Image src={EmailIcon} alt="ContactIcon" />
-                                <Text textType={TextType.Regular} addClassName="text-white font-medium ">sales@megadata.id</Text>
+                                <Text textType={TextType.Regular} addClassName="text-white font-medium ">marketing@labra.com</Text>
                             </div>
                         </div>
                 </div>
