@@ -1,6 +1,6 @@
 # Labra V.22
 
-My initial assignment in this project is to create a captivating that highlights the features and benefits of LABRA V.22 landing page for LABRA V.22, which is a radio product, as requested by my friend.
+My initial assignment in this project is to create a captivating that highlights the features and benefits of LABRA V.22 in a landing page, which is a radio product, as requested by my friend.
 
 ![Labra V.22](https://media.discordapp.net/attachments/1021751620331126865/1090633401746325724/labra-img.png?width=791&height=471)
 
