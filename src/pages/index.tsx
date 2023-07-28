@@ -1,3 +1,5 @@
+/** @format */
+
 import Image from "next/image";
 
 import Text, { TextType } from "@/components/atoms/Text";
@@ -27,13 +29,18 @@ export default function Home() {
           <ContentContainer title="About">
             <div className="flex flex-col gap-[30px]">
               <Text textType={TextType.Regular}>
-                LABRA V.22 Interface Gateway technology RolP (Radio Through IP) is a terminal between 2-ways radio using cellular technology with IP configuration.
+                LABRA V.22 Interface Gateway technology RolP (Radio Through IP)
+                is a terminal between 2-ways radio using cellular technology
+                with IP configuration.
               </Text>
               <Text textType={TextType.Regular}>
-                 This technology is to ensure that the audio is transmitted simultaneously and the PPT control signal is transmitted immediately and reliably
+                This technology is to ensure that the audio is transmitted
+                simultaneously and the PPT control signal is transmitted
+                immediately and reliably
               </Text>
               <Text textType={TextType.Regular}>
-                 Radio range is generally limited by limited transmission power, antenna sensitivity, and other environmental factors.
+                Radio range is generally limited by limited transmission power,
+                antenna sensitivity, and other environmental factors.
               </Text>
             </div>
           </ContentContainer>
@@ -48,24 +55,36 @@ export default function Home() {
         <GlobalContainer>
           <ContentContainer title="Spesification of" addClassName="text-white">
             <div className="flex flex-wrap justify-center gap-[30px] ">
-              {spesificationContent.map(content => (
-                <Card key={content.title} title={content.title} cardType={CardType.Spesification} image={content.image} />
+              {spesificationContent.map((content) => (
+                <Card
+                  key={content.title}
+                  title={content.title}
+                  cardType={CardType.Spesification}
+                  image={content.image}
+                />
               ))}
             </div>
           </ContentContainer>
         </GlobalContainer>
       </div>
-      <div 
+      <div
         className="min-h-[1200px] w-[100vw] pb-[50px] bg-no-repeat bg-cover bg-center"
         style={{
           backgroundImage: `url(${FeatureBg.src})`,
-        }} 
+        }}
         id="Feature">
         <GlobalContainer>
-          <ContentContainer title="Discover Features of" addClassName="text-white">
+          <ContentContainer
+            title="Discover Features of"
+            addClassName="text-white">
             <div className="flex flex-wrap justify-center gap-[30px] ">
-              {featureContent.map(content => (
-                <Card key={content.title} title={content.title} cardType={CardType.Feature} image={content.image} />
+              {featureContent.map((content) => (
+                <Card
+                  key={content.title}
+                  title={content.title}
+                  cardType={CardType.Feature}
+                  image={content.image}
+                />
               ))}
             </div>
           </ContentContainer>
@@ -75,8 +94,15 @@ export default function Home() {
         <GlobalContainer>
           <ContentContainer title="Support of" addClassName="text-black">
             <div className="w-[100%]">
-              {supportContent.map(content => (
-                <Card key={content.title} title={content.title} subTitle={content.subTitle} cardType={CardType.Support} image={content.image} imageSecond={content.imageSecond} />
+              {supportContent.map((content) => (
+                <Card
+                  key={content.title}
+                  title={content.title}
+                  subTitle={content.subTitle}
+                  cardType={CardType.Support}
+                  image={content.image}
+                  imageSecond={content.imageSecond}
+                />
               ))}
             </div>
           </ContentContainer>
@@ -84,5 +110,5 @@ export default function Home() {
       </div>
       <Footer />
     </>
-  )
+  );
 }
